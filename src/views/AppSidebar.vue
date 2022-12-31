@@ -153,7 +153,8 @@ License along with this library. If not, see <http://www.gnu.org/licenses/>.
 					:value="statusOptions.find( _ => _.type === task.status )"
 					:options="statusOptions"
 					:disabled="readOnly"
-					:placeholder="t('tasks', 'Select a status')"
+					<!-- :placeholder="t('tasks', 'Select a status')" -->
+                    :placeholder="Test"
 					icon="IconPulse"
 					@change-value="changeStatus" />
 				<MultiselectItem v-show="!readOnly || 1"
