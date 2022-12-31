@@ -70,6 +70,7 @@ export default class Task {
 		// because we only want to allow one request at a time
 		// (otherwise we will run into problems with changed ETags).
 		this.updateQueue = new PQueue({ concurrency: 1 })
+
 	}
 
 	initTodo() {
@@ -125,6 +126,8 @@ export default class Task {
 
 		this._searchQuery = ''
 		this._matchesSearchQuery = true
+
+		this._assignedToUsers = []
 	}
 
 	/**
@@ -616,6 +619,17 @@ export default class Task {
 		}
 	}
 
+    get assignedToUsers() {
+        return this._assignedToUsers
+    }
+    
+    
+    set assignedToUsers(user) {
+        // TODO: assign users
+
+    }
+   
+    
 	get class() {
 		return this._class
 	}

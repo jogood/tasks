@@ -156,6 +156,13 @@ License along with this library. If not, see <http://www.gnu.org/licenses/>.
 					:placeholder="t('tasks', 'Select a status')"
 					icon="IconPulse"
 					@change-value="changeStatus" />
+				<MultiselectItem v-show="!readOnly || task.assignedToUsers"
+					:value="task.assignedToUsers"
+					:options="statusOptions"
+					:disabled="readOnly"
+					:placeholder="t('tasks', 'Select user')"
+					icon="IconPulse"
+					@change-value="changeStatus" />
 				<SliderItem v-show="!readOnly || task.priority"
 					:value="task.priority"
 					:property-string="priorityString"
