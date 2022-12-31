@@ -156,7 +156,7 @@ License along with this library. If not, see <http://www.gnu.org/licenses/>.
 					:placeholder="t('tasks', 'Select a status')"
 					icon="IconPulse"
 					@change-value="changeStatus" />
-				<MultiselectItem v-show="!readOnly || task.assignedToUsers"
+				<MultiselectItem v-show="!readOnly || 1"
 					:value="task.assignedToUsers"
 					:options="statusOptions"
 					:disabled="readOnly"
